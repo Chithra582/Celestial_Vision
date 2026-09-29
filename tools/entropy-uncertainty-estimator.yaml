@@ -1,0 +1,15 @@
+name: "entropy-uncertainty-estimator"
+description: "Calculates Shannon entropy and flags out-of-distribution or blended astronomical candidates."
+input_schema:
+  type: "object"
+  properties:
+    class_probabilities:
+      type: "array"
+      items:
+        type: "number"
+      description: "Softmax probability distribution across celestial classes."
+    entropy_threshold:
+      type: "number"
+      description: "Entropy threshold to flag uncertain or blended candidates (default: 1.25)."
+  required:
+    - "class_probabilities"

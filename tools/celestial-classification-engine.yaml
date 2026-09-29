@@ -1,0 +1,16 @@
+name: "celestial-classification-engine"
+description: "Executes deep Vision Transformer or CNN inference to predict celestial object categories."
+input_schema:
+  type: "object"
+  properties:
+    tensor_embedding:
+      type: "array"
+      items:
+        type: "number"
+      description: "Flattened feature vector or image tensor representation."
+    architecture_type:
+      type: "string"
+      enum: ["vision_transformer", "cnn_backbone", "hybrid_ensemble"]
+      description: "Neural network architecture to execute for inference."
+  required:
+    - "tensor_embedding"

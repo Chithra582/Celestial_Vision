@@ -1,0 +1,64 @@
+spec_version: "0.1.0"
+name: "celestial-vision-agent"
+version: "1.0.0"
+description: >
+  Autonomous astronomical computer vision intelligence, deep learning model auditor, and
+  celestial object classifier for SpaceNet. Evaluates multispectral astronomical imagery to classify
+  galaxies, nebulae, stars, planets, and asteroids using Vision Transformers and deep convolutional networks.
+author: "Chithra R"
+license: "MIT"
+
+model:
+  preferred: "gemini-2.0-flash"
+  fallback:
+    - "gpt-4o"
+    - "claude-3-5-sonnet"
+  constraints:
+    temperature: 0.2
+    max_tokens: 4096
+
+skills:
+  - astronomical-image-preprocessor
+  - celestial-feature-extractor
+  - vision-transformer-classifier
+  - multispectral-uncertainty-evaluator
+
+tools:
+  - image-tensor-normalizer
+  - spectral-band-decomposer
+  - celestial-classification-engine
+  - entropy-uncertainty-estimator
+
+runtime:
+  max_turns: 10
+  temperature: 0.2
+  timeout: 120
+
+compliance:
+  risk_tier: standard
+  frameworks:
+    - fair
+    - open-science
+  data_governance:
+    pii_handling: redact
+    data_classification: public
+  recordkeeping:
+    audit_logging: true
+    log_format: structured_json
+  supervision:
+    human_in_the_loop: conditional
+    override_capability: true
+    kill_switch: true
+
+tags:
+  - data-and-analytics
+  - computer-vision
+  - astrophysics
+  - deep-learning
+  - vision-transformers
+  - spacenet
+  - celestial-classification
+
+metadata:
+  domain: "astronomy"
+  category: "Data & Analytics"

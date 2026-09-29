@@ -1,0 +1,17 @@
+name: "image-tensor-normalizer"
+description: "Normalizes astronomical image matrices using arcsinh and z-scale photometric scaling."
+input_schema:
+  type: "object"
+  properties:
+    image_shape:
+      type: "array"
+      items:
+        type: "integer"
+      description: "Dimensions of input image [Channels, Height, Width]."
+    stretching_algorithm:
+      type: "string"
+      enum: ["arcsinh", "zscale", "logarithmic", "minmax"]
+      description: "Selected astronomical photometric stretch algorithm."
+  required:
+    - "image_shape"
+    - "stretching_algorithm"

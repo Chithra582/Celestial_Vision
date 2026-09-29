@@ -1,0 +1,15 @@
+name: "spectral-band-decomposer"
+description: "Decomposes multi-band astronomical images into discrete wavelength channels and patch embeddings."
+input_schema:
+  type: "object"
+  properties:
+    spectral_filters:
+      type: "array"
+      items:
+        type: "string"
+      description: "List of astronomical optical filter names (e.g., u, g, r, i, z)."
+    patch_size:
+      type: "integer"
+      description: "Spatial patch size for Vision Transformer tokenization (default: 16)."
+  required:
+    - "spectral_filters"
